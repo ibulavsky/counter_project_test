@@ -3,7 +3,6 @@ import './App.css';
 
 const Header = () => {
 
-
     return (
         <div className="title">
             <h3>Counter</h3>
