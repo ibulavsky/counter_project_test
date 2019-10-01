@@ -1,67 +1,93 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
 import Header from "./Header";
+import Settings from "./SettingMode/Settings";
 import Footer from "./Footer";
 import Counter from "./CountMode/Counter";
+import {applySettingsAC, defaultNumberAC, incrementNumberAC} from "./Redux/Reducer";
+import {connect} from "react-redux";
 
-class App extends Component {
-    // I use redux as BLL, class and function components in React as UI
-    // in this "Counter"
-
-    state = {
-        settingModeOn: true,
-        stopCounter: false,
-        step: 1,
-        counter : {
-            currentValue: 1,
-            maxValue: 5,
-            minValue: 0,
-        },
-    };
-
-    settingModeOn = () => {
-        this.setState({
-            settingMode: !this.state.settingMode,
-        })
-    };
+class App extends React.Component {
 
     incrementNumber = () => {
-        let currentValue = +this.state.counter.currentValue + this.state.step;
-        if (currentValue >= this.state.counter.maxValue) {
-            // this.props.incrementNumber(currentValue);
+        let currentValue = +this.props.counter.currentValue + this.state.step;
+        if (currentValue >= this.props.counter.maxValue) {
+            this.props.incrementNumber(currentValue);
             this.setState(
                 {
                     stopCounter: true
                 })
         } else {
-            // this.props.incrementNumber(currentValue);
+            this.props.incrementNumber(currentValue);
         }
     };
 
     defaultNumber = () => {
-        // this.props.defaultNumber(this.state.counter.minValue);
+        this.props.defaultNumber(this.props.counter.minValue);
         this.setState({
             stopCounter: false
         })
     };
 
-    render() {
+    settingModeOn = () => {
+        this.setState({
+            settingMode: !this.state.settingMode
+        })
+    };
+
+    applySetting = (minValue, maxValue,) => {
+        this.props.applySettings(minValue, maxValue);
+        this.setState(
+            {
+                stopCounter: false
+            }
+        )
+    };
+
+    state = {
+        stopCounter: false,
+        settingMode: false,
+        step: 1,
+    };
+    render = () => {
         return (
             <div className="App">
                 <Header/>
                 {this.state.settingMode
-                    ? <div>
-                        Settings
-                    </div>
-                    : <Counter counter={this.state.counter}
-                               stopCounter={this.state.stopCounter}
+                    ? <Settings maxValue={this.props.counter.maxValue}
+                                minValue={this.props.counter.minValue}
+                                applySetting={this.applySetting}
+                    />
+                    : <Counter counter={this.props.counter}
+                               state={this.state}
                                incrementNumber={this.incrementNumber}
                                defaultNumber={this.defaultNumber}/>
                 }
                 <Footer onClick={this.settingModeOn}/>
             </div>
-        );
+        )
     }
 }
 
-export default App;
+let mapStateToProps = (state) => {
+    return {
+        counter: state.counter,
+    }
+};
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        incrementNumber(currentValue) {
+            dispatch(incrementNumberAC(currentValue))
+        },
+        defaultNumber(minValue) {
+            dispatch(defaultNumberAC(minValue))
+        },
+        applySettings(minValue, maxValue) {
+            dispatch(applySettingsAC(minValue, maxValue))
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+

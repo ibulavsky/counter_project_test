@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css';
 import Button from "../Button";
 
-
 class Settings extends React.Component {
 
     state = {
@@ -57,9 +56,8 @@ class Settings extends React.Component {
                     minValue: +e.currentTarget.value
                 }
             )
-
         }
-    }
+    };
 
     onApplySetting = () => {
         let maxValue = this.state.maxValue;

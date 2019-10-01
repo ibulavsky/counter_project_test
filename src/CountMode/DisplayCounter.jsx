@@ -14,4 +14,3 @@ const DisplayCounter = (props) => {
 };
 
 export default DisplayCounter;
-
