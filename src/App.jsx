@@ -49,6 +49,14 @@ class App extends React.Component {
         settingMode: false,
         step: 1,
     };
+    restoreState = () => {
+
+    };
+
+    saveState = () => {
+
+    };
+
     render = () => {
         return (
             <div className="App">

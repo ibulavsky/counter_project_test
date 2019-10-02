@@ -6,7 +6,7 @@ const Footer = (props) => {
 
     return (
         <div className="footer">
-            <span>Press</span>
+            <span>To change mode Press</span>
             <span>
                 <input className="inputFooter"
                        type='image'
@@ -15,7 +15,6 @@ const Footer = (props) => {
                        onClick={() => props.onClick()}
                  alt='settings'/>
            </span>
-            <span> to change mode</span>
         </div>
     );
 };
