@@ -1,50 +1,51 @@
 .App {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    /*text-align: center;*/
     background-color: gray;
     height: 100vh;
 }
 
-.footer {
-    /*position: absolute;*/
-    color: white;
-    text-align: center;
-    background-color: gray;
-        /*left: 25%;*/
+.content {
+    width: 500px;
+    height: 120px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    /*border: solid 2px black;*/
-    /*border-radius: 50px;*/
-    /*width: 50%;*/
+    /*border: 1px solid red;*/
 }
 
+.listWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    /*border: 1px solid green;*/
+    color: white;
+    list-style-type: none;
+}
+
+.footer {
+    color: white;
+    background-color: gray;
+}
 
 .error {
     border-color: red;
     background-color: deeppink;
 }
 
-
 .title {
-    border: none;
     border-radius: 15px;
-    width: 50%;
-    margin: auto;
-    alignment: center;
     color: white;
-    text-align: center;
-    padding: 5px 0;
-    cursor: default;
 }
 
 .display {
     color: deepskyblue;
     font-size: 40px;
-    width: 300px;
     height: 70px;
-    margin: auto;
-    padding: 5px 0;
-    /*border: 1px dotted deepskyblue;*/
     cursor: default;
 }
 
@@ -59,20 +60,13 @@
     width: 95px;
     padding: 5px 10px;
     color: white;
-    /*margin: 5px;*/
     background-color: gray;
     font-size: 15px;
     text-align: center;
-
-    /*не работают:*/
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .button:hover {
-    background-color: green;
+    background-color: deepskyblue;
     color: white;
     cursor: pointer
 }
@@ -105,10 +99,9 @@
 }
 
 .settings {
-
-    display: grid;
-    grid-template-rows: 1fr 1.3fr 25px;
-    grid-template-columns: 1fr 1fr;
+    /*display: grid;*/
+    /*grid-template-rows: 1fr 1.3fr 25px;*/
+    /*grid-template-columns: 1fr 1fr;*/
     width: 300px;
     height: 100px;
     margin: auto;

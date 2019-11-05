@@ -77,24 +77,26 @@ class Settings extends React.Component {
         let classForInputMin = this.state.errorMin ? 'error' : '';
 
         return (
-
-            <div className="settings">
-                <div>MAX VALUE</div>
-                <div>MIN VALUE</div>
-                <input className={classForInputMax}
-                       type='number'
-                       value={this.state.maxValue}
-                       onChange={this.onChangeMax}
-                />
-                <input className={classForInputMin}
-                       type='number'
-                       value={this.state.minValue}
-                       onChange={this.onChangeMin}
-                />
+            <div className="content">
+                <div className='listWrapper'>
+                    <div>MAX VALUE</div>
+                    <div>MIN VALUE</div>
+                </div>
+                <span>
+                    <input className={classForInputMax}
+                           type='number'
+                           value={this.state.maxValue}
+                           onChange={this.onChangeMax}
+                    />
+                    <input className={classForInputMin}
+                           type='number'
+                           value={this.state.minValue}
+                           onChange={this.onChangeMin}
+                    />
+                </span>
                 <Button name='apply'
                         onClick={this.onApplySetting}
                 />
-                <br/>
             </div>
         )
     }
