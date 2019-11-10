@@ -1,9 +1,7 @@
 .App {
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
     align-items: center;
-    /*text-align: center;*/
     background-color: gray;
     height: 100vh;
 }
@@ -15,14 +13,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /*border: 1px solid red;*/
 }
 
 .listWrapper {
     display: flex;
     justify-content: space-between;
     width: 300px;
-    /*border: 1px solid green;*/
     color: white;
     list-style-type: none;
 }
@@ -32,7 +28,7 @@
     background-color: gray;
 }
 
-.error {
+.input.error {
     border-color: red;
     background-color: deeppink;
 }
@@ -87,7 +83,6 @@
 .disabled:hover {
     background-color: red;
     color: white;
-
 }
 
 .countNumber {
@@ -99,24 +94,19 @@
 }
 
 .settings {
-    /*display: grid;*/
-    /*grid-template-rows: 1fr 1.3fr 25px;*/
-    /*grid-template-columns: 1fr 1fr;*/
     width: 300px;
     height: 100px;
     margin: auto;
     padding: 5px 0;
-
 }
 
-.settings input {
+.input {
     border: 1px solid white;
     border-radius: 12px;
-    width: 120px;
+    text-align: center;
+    width: 50px;
     height: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-
+    margin: 10px;
 }
 
 .settings div {

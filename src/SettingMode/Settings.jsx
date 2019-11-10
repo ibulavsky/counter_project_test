@@ -73,8 +73,8 @@ class Settings extends React.Component {
 
     render = () => {
 
-        let classForInputMax = this.state.errorMax ? 'error' : '';
-        let classForInputMin = this.state.errorMin ? 'error' : '';
+        let classForInputMax = this.state.errorMax ? 'input error' : 'input';
+        let classForInputMin = this.state.errorMin ? 'input error' : 'input';
 
         return (
             <div className="content">
