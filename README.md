@@ -1,4 +1,4 @@
-Counter https://ibulavsky.github.io/counter_project_test/
+Counter https://ibulavsky.github.io/easy-counter/
 
 Business Logic Layer : Redux, store in single file.
 Users Interface : React
