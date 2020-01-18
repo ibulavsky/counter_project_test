@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/counter_project_test/static/css/main.608752f3.chunk.css",
-    "main.js": "/counter_project_test/static/js/main.aed2669c.chunk.js",
-    "main.js.map": "/counter_project_test/static/js/main.aed2669c.chunk.js.map",
-    "runtime-main.js": "/counter_project_test/static/js/runtime-main.ea5b1463.js",
-    "runtime-main.js.map": "/counter_project_test/static/js/runtime-main.ea5b1463.js.map",
-    "static/js/2.1914613d.chunk.js": "/counter_project_test/static/js/2.1914613d.chunk.js",
-    "static/js/2.1914613d.chunk.js.map": "/counter_project_test/static/js/2.1914613d.chunk.js.map",
-    "index.html": "/counter_project_test/index.html",
-    "precache-manifest.9a01d42b27eff147b4efc17ec70f9846.js": "/counter_project_test/precache-manifest.9a01d42b27eff147b4efc17ec70f9846.js",
-    "service-worker.js": "/counter_project_test/service-worker.js",
-    "static/css/main.608752f3.chunk.css.map": "/counter_project_test/static/css/main.608752f3.chunk.css.map",
-    "static/media/SettingsUI.png": "/counter_project_test/static/media/SettingsUI.a188b984.png"
+    "main.css": "/easy-counter/static/css/main.e1e7aa57.chunk.css",
+    "main.js": "/easy-counter/static/js/main.b0c4face.chunk.js",
+    "main.js.map": "/easy-counter/static/js/main.b0c4face.chunk.js.map",
+    "runtime-main.js": "/easy-counter/static/js/runtime-main.8da80d3f.js",
+    "runtime-main.js.map": "/easy-counter/static/js/runtime-main.8da80d3f.js.map",
+    "static/js/2.1914613d.chunk.js": "/easy-counter/static/js/2.1914613d.chunk.js",
+    "static/js/2.1914613d.chunk.js.map": "/easy-counter/static/js/2.1914613d.chunk.js.map",
+    "index.html": "/easy-counter/index.html",
+    "precache-manifest.4a6a4f92c3cc0b2bc547b61fd51d8f56.js": "/easy-counter/precache-manifest.4a6a4f92c3cc0b2bc547b61fd51d8f56.js",
+    "service-worker.js": "/easy-counter/service-worker.js",
+    "static/css/main.e1e7aa57.chunk.css.map": "/easy-counter/static/css/main.e1e7aa57.chunk.css.map",
+    "static/media/SettingsUI.png": "/easy-counter/static/media/SettingsUI.a188b984.png"
   }
 }
